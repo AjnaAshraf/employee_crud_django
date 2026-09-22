@@ -1,0 +1,28 @@
+# api call for listing all employee
+
+###
+GET  http://127.0.0.1:8000/employees/
+Accept: application/json
+
+
+#api call for adding a employee record 
+
+###
+POST http://127.0.0.1:8000/employees/
+Content-Type: application/json
+
+{
+
+    "name":"Ajna",
+    "department":"IT",
+    "salary":56000,
+    "location":"EKM",
+    "email":"ajnaashraf@gmail.com"
+
+}
+
+# api call for retrieving a employee detail
+
+### 
+GET http://127.0.0.1:8000/employees/1/
+Accept: application/json
