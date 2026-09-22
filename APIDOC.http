@@ -12,13 +12,11 @@ POST http://127.0.0.1:8000/employees/
 Content-Type: application/json
 
 {
-
-    "name":"Ajna",
-    "department":"IT",
-    "salary":56000,
-    "location":"EKM",
-    "email":"ajnaashraf@gmail.com"
-
+    "name": "Sara",
+    "department": "IT",
+    "salary": 72000,
+    "location": "Kochi",
+    "email": "sara@gmail.com"
 }
 
 # api call for retrieving a employee detail
@@ -26,3 +24,9 @@ Content-Type: application/json
 ### 
 GET http://127.0.0.1:8000/employees/1/
 Accept: application/json
+
+
+# api call for deleting a employee detail
+
+### 
+DELETE  http://127.0.0.1:8000/employees/2/
