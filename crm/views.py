@@ -11,7 +11,6 @@ from json import loads
 from django.views.decorators.csrf import csrf_exempt
 
 from django.utils.decorators import method_decorator
-# Create your views here.
 
 @method_decorator(csrf_exempt,name="dispatch")
 class EmployeeCreateListView(View):
@@ -28,15 +27,6 @@ class EmployeeCreateListView(View):
 
         form_data = loads(request.body)
 
-        """
-            "name":"Ajna",
-            "department":"IT",
-            "salary":56000,
-            "location":"EKM",
-            "email":"ajnaashraf@gmail.com"
-                    
-        """
-
         Employee.objects.create(
             name=form_data.get("name"),
             department = form_data.get("department"),
@@ -47,6 +37,7 @@ class EmployeeCreateListView(View):
             )
 
         return JsonResponse({"message": "Record created ......"})
+    
 @method_decorator(csrf_exempt,name="dispatch")
 class EmployeeRetrieveUpdateDeleteView(View):
 
